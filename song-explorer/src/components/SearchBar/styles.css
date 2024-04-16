@@ -1,0 +1,17 @@
+.search-box {
+  margin-bottom: 20px;
+  display: flex;
+}
+input {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  outline: none;
+  border: 1px solid gray;
+  border-right: none;
+}
+button {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  outline: none;
+  border: 1px solid gray;
+}

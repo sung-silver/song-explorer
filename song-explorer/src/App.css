@@ -9,4 +9,5 @@ body {
   background: #ffffff;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }

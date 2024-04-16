@@ -1,15 +1,25 @@
+import axios from 'axios';
+import { useRef } from 'react';
 import './styles.css';
+function SearchBar({ setSongList }) {
+  const inputRef = useRef();
 
-function SearchBar({}) {
+  const handleSearch = () => {
+    console.log('search');
+    axios
+      .get(`https://api.manana.kr/karaoke/song/${inputRef.current.value}.json`)
+      .then((res) => {
+        console.log(res.data);
+        setSongList(res.data);
+      });
+  };
+
   return (
-    <div className='box'>
-      <div>
-        <div className='title'>{title}</div>
-        <div className='singer'>{singer}</div>
-      </div>
-      <div className='number'>{no}</div>
+    <div className='search-box'>
+      <input type='search' ref={inputRef} />
+      <button onClick={handleSearch}>검색</button>
     </div>
   );
 }
 
-export default Song;
+export default SearchBar;

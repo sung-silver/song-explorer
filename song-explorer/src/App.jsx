@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar';
 import SongList from './components/SongList';
 
 const data = [
@@ -32,9 +34,12 @@ const data = [
 ];
 
 function App() {
+  const [data, setData] = useState([]);
+
   return (
     <>
       <div className='Song'>
+        <SearchBar setSongList={setData} />
         <div className='SongList'>
           <SongList data={data} />
         </div>
