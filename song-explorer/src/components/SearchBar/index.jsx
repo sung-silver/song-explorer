@@ -16,7 +16,16 @@ function SearchBar({ setSongList }) {
 
   return (
     <div className='search-box'>
-      <input type='search' ref={inputRef} />
+      <input
+        type='search'
+        ref={inputRef}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleSearch();
+            return;
+          }
+        }}
+      />
       <button onClick={handleSearch}>검색</button>
     </div>
   );

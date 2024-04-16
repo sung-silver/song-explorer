@@ -34,15 +34,21 @@ const data = [
 ];
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
 
   return (
     <>
       <div className='Song'>
         <SearchBar setSongList={setData} />
-        <div className='SongList'>
-          <SongList data={data} />
-        </div>
+        {data ? (
+          <>
+            <div className='SongList'>
+              <SongList data={data} />
+            </div>
+          </>
+        ) : (
+          <div>노래를 검색해주세요.</div>
+        )}
       </div>
     </>
   );
