@@ -1,8 +1,11 @@
 .search-box {
   margin-bottom: 20px;
   display: flex;
+  width: 300px;
 }
 input {
+  flex: 1;
+  padding: 10px;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
   outline: none;
@@ -10,6 +13,7 @@ input {
   border-right: none;
 }
 button {
+  width: 50px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   outline: none;
