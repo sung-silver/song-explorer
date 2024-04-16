@@ -1,0 +1,12 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Song {
+  display: flex;
+  height: 100vh;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+}

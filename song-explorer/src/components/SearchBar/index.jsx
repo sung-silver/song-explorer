@@ -1,6 +1,6 @@
 import './styles.css';
 
-function Song({ title, no, singer }) {
+function SearchBar({}) {
   return (
     <div className='box'>
       <div>
